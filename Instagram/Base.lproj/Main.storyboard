@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,13 +77,39 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="226" id="vpg-ye-3p5">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="226"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="386" id="vpg-ye-3p5" customClass="FeedTableViewCell" customModule="Instagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="386"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vpg-ye-3p5" id="R1M-5P-AhN">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="225.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="385.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mew-ch-NWc">
+                                                    <rect key="frame" x="15" y="19" width="290" height="290"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="290" id="K33-1s-LgK"/>
+                                                        <constraint firstAttribute="width" constant="290" id="o8L-5p-GIe"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Dope captions go here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbG-72-bFZ">
+                                                    <rect key="frame" x="15" y="317" width="290" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MbG-72-bFZ" secondAttribute="bottom" constant="8" id="58h-oY-DcR"/>
+                                                <constraint firstItem="Mew-ch-NWc" firstAttribute="top" secondItem="R1M-5P-AhN" secondAttribute="topMargin" constant="8" id="BCM-v8-xUF"/>
+                                                <constraint firstItem="MbG-72-bFZ" firstAttribute="top" secondItem="Mew-ch-NWc" secondAttribute="bottom" constant="8" id="Xso-Mn-eHu"/>
+                                                <constraint firstItem="Mew-ch-NWc" firstAttribute="leading" secondItem="R1M-5P-AhN" secondAttribute="leadingMargin" id="f2x-l8-VJm"/>
+                                                <constraint firstItem="Mew-ch-NWc" firstAttribute="trailing" secondItem="R1M-5P-AhN" secondAttribute="trailingMargin" id="vc3-Oi-ex4"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="MbG-72-bFZ" id="kLs-3g-J9G"/>
+                                            <outlet property="photoImageView" destination="Mew-ch-NWc" id="IGg-zp-FS7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -57,7 +57,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func onPost(_ sender: Any) {
         // Set the caption and photo
         let caption = captionTextField.text
-        let postPic = resize(photo: self.photoImageView.image!, newSize: CGSize(width:240, height:240))
+        let postPic = resize(photo: self.photoImageView.image!, newSize: CGSize(width:290, height:290))
         
         // Post the photo and caption
         Post.postUserImage(photo: postPic, caption: caption) { (success: Bool, error: Error?) in
