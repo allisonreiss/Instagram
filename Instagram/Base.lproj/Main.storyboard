@@ -63,37 +63,92 @@
             </objects>
             <point key="canvasLocation" x="1554" y="131"/>
         </scene>
-        <!--Home Feed View Controller-->
+        <!--Instagram-->
         <scene sceneID="bYF-lb-6MM">
             <objects>
                 <viewController storyboardIdentifier="HomeFeedViewController" id="6YX-kX-abD" customClass="HomeFeedViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mny-LB-Zh9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gX6-Ii-med">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="226" id="vpg-ye-3p5">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="226"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vpg-ye-3p5" id="R1M-5P-AhN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="225.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ZhV-64-KrR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lgb-A1-xGL"/>
+                    <navigationItem key="navigationItem" title="Instagram" id="lgb-A1-xGL"/>
+                    <connections>
+                        <outlet property="tableView" destination="gX6-Ii-med" id="bFy-FN-g2O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2z-3r-mwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="914"/>
+            <point key="canvasLocation" x="885" y="913.73239436619724"/>
         </scene>
-        <!--Capture View Controller-->
+        <!--Tap to add a photo-->
         <scene sceneID="Fip-Wt-H4U">
             <objects>
                 <viewController storyboardIdentifier="CaptureViewController" id="asx-ve-HfI" customClass="CaptureViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yft-aa-PGe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9RL-ul-rEi">
+                                <rect key="frame" x="16" y="404" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZh-x9-30d">
+                                <rect key="frame" x="254" y="452" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="onPost:" destination="asx-ve-HfI" eventType="touchUpInside" id="dKT-ba-B7h"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="krF-th-Ipe">
+                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.472422090630647" green="0.038725068825292142" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1Fd-BL-j9f" appends="YES" id="3O7-up-DdI"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Nx9-1A-dcF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lW5-jV-tZr"/>
+                    <navigationItem key="navigationItem" title="Tap to add a photo" id="lW5-jV-tZr"/>
+                    <connections>
+                        <outlet property="captionTextField" destination="9RL-ul-rEi" id="X7d-fX-fL8"/>
+                        <outlet property="photoImageView" destination="krF-th-Ipe" id="cYv-Yf-gBt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdx-my-yPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1Fd-BL-j9f">
+                    <connections>
+                        <action selector="onAddPhoto:" destination="asx-ve-HfI" id="4CC-7d-5OF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2235" y="914"/>
+            <point key="canvasLocation" x="2235" y="913.73239436619724"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M3W-h2-6re">
@@ -151,7 +206,7 @@
             </objects>
             <point key="canvasLocation" x="2348" y="132"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--My Profile-->
         <scene sceneID="1eF-Q5-8ov">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="yv7-ch-1I6" customClass="ProfileViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -171,7 +226,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="bi4-jp-8RE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XO6-S4-js6"/>
+                    <navigationItem key="navigationItem" title="My Profile" id="XO6-S4-js6"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="P8D-I4-ity"/>
                     </connections>
@@ -225,7 +280,6 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9AQ-6e-ABC"/>
         <segue reference="P8D-I4-ity"/>
     </inferredMetricsTieBreakers>
 </document>
