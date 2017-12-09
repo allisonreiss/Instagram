@@ -18,6 +18,9 @@
 		FBCFE1BD1FDB6788004F4DD5 /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE1BC1FDB6788004F4DD5 /* InstagramTests.swift */; };
 		FBCFE1C81FDB6788004F4DD5 /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE1C71FDB6788004F4DD5 /* InstagramUITests.swift */; };
 		FBCFE1D61FDB69D2004F4DD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE1D51FDB69D2004F4DD5 /* LoginViewController.swift */; };
+		FBCFE1D81FDB84B2004F4DD5 /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE1D71FDB84B2004F4DD5 /* HomeFeedViewController.swift */; };
+		FBCFE1DB1FDB8A9E004F4DD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE1DA1FDB8A9E004F4DD5 /* ProfileViewController.swift */; };
+		FBCFE1DD1FDB8AC2004F4DD5 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE1DC1FDB8AC2004F4DD5 /* CaptureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		FBCFE1C71FDB6788004F4DD5 /* InstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramUITests.swift; sourceTree = "<group>"; };
 		FBCFE1C91FDB6788004F4DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBCFE1D51FDB69D2004F4DD5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FBCFE1D71FDB84B2004F4DD5 /* HomeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
+		FBCFE1DA1FDB8A9E004F4DD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FBCFE1DC1FDB8AC2004F4DD5 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,10 +145,10 @@
 		FBCFE1A61FDB6787004F4DD5 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				FBCFE1D91FDB8A69004F4DD5 /* View Controllers */,
 				FBCFE1A71FDB6787004F4DD5 /* AppDelegate.swift */,
 				FBCFE1A91FDB6787004F4DD5 /* ViewController.swift */,
 				FBCFE1AB1FDB6787004F4DD5 /* Main.storyboard */,
-				FBCFE1D51FDB69D2004F4DD5 /* LoginViewController.swift */,
 				FBCFE1AE1FDB6787004F4DD5 /* Assets.xcassets */,
 				FBCFE1B01FDB6787004F4DD5 /* LaunchScreen.storyboard */,
 				FBCFE1B31FDB6787004F4DD5 /* Info.plist */,
@@ -166,6 +172,17 @@
 				FBCFE1C91FDB6788004F4DD5 /* Info.plist */,
 			);
 			path = InstagramUITests;
+			sourceTree = "<group>";
+		};
+		FBCFE1D91FDB8A69004F4DD5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FBCFE1D71FDB84B2004F4DD5 /* HomeFeedViewController.swift */,
+				FBCFE1D51FDB69D2004F4DD5 /* LoginViewController.swift */,
+				FBCFE1DA1FDB8A9E004F4DD5 /* ProfileViewController.swift */,
+				FBCFE1DC1FDB8AC2004F4DD5 /* CaptureViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,8 +481,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCFE1D61FDB69D2004F4DD5 /* LoginViewController.swift in Sources */,
+				FBCFE1DD1FDB8AC2004F4DD5 /* CaptureViewController.swift in Sources */,
 				FBCFE1AA1FDB6787004F4DD5 /* ViewController.swift in Sources */,
+				FBCFE1DB1FDB8A9E004F4DD5 /* ProfileViewController.swift in Sources */,
 				FBCFE1A81FDB6787004F4DD5 /* AppDelegate.swift in Sources */,
+				FBCFE1D81FDB84B2004F4DD5 /* HomeFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
