@@ -23,10 +23,20 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 650
         
-        self.tableView.reloadData()
+        // Initialize UI refresh control
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
+        // Add refresh contorl to table view
+        tableView.insertSubview(refreshControl, at: 0)
+        
+        loadPosts()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        loadPosts()
+    }
+    
+    func loadPosts() {
         // Query
         let query = PFQuery(className: "Post")
         query.order(byDescending: "_created_at")
@@ -70,6 +80,11 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         return cell
+    }
+    
+    @objc func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        loadPosts()
+        refreshControl.endRefreshing()
     }
     
     override func didReceiveMemoryWarning() {

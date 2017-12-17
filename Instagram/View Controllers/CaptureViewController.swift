@@ -35,8 +35,6 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func onAddPhoto(_ sender: Any) {
-        print("I see that you tapped yo")
-        
         //show image picker
         self.present(imagePickerController, animated: true, completion: nil)
     }
@@ -63,6 +61,8 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         Post.postUserImage(photo: postPic, caption: caption) { (success: Bool, error: Error?) in
             if success {
                 print("Yayyyy photo posted!")
+                self.captionTextField.text = ""
+                self.photoImageView.image = nil
                 // go back to Home Feed
                 self.tabBarController?.selectedIndex = 0
             } else {

@@ -21,6 +21,8 @@
 		FBCFE1D81FDB84B2004F4DD5 /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE1D71FDB84B2004F4DD5 /* HomeFeedViewController.swift */; };
 		FBCFE1DB1FDB8A9E004F4DD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE1DA1FDB8A9E004F4DD5 /* ProfileViewController.swift */; };
 		FBCFE1DD1FDB8AC2004F4DD5 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE1DC1FDB8AC2004F4DD5 /* CaptureViewController.swift */; };
+		FBCFE1DF1FDB99D0004F4DD5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE1DE1FDB99D0004F4DD5 /* Post.swift */; };
+		FBCFE1E11FDBAF0E004F4DD5 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE1E01FDBAF0E004F4DD5 /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		FBCFE1D71FDB84B2004F4DD5 /* HomeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
 		FBCFE1DA1FDB8A9E004F4DD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FBCFE1DC1FDB8AC2004F4DD5 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
+		FBCFE1DE1FDB99D0004F4DD5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FBCFE1E01FDBAF0E004F4DD5 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				FBCFE1AE1FDB6787004F4DD5 /* Assets.xcassets */,
 				FBCFE1B01FDB6787004F4DD5 /* LaunchScreen.storyboard */,
 				FBCFE1B31FDB6787004F4DD5 /* Info.plist */,
+				FBCFE1DE1FDB99D0004F4DD5 /* Post.swift */,
+				FBCFE1E01FDBAF0E004F4DD5 /* FeedTableViewCell.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -481,10 +487,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCFE1D61FDB69D2004F4DD5 /* LoginViewController.swift in Sources */,
+				FBCFE1E11FDBAF0E004F4DD5 /* FeedTableViewCell.swift in Sources */,
 				FBCFE1DD1FDB8AC2004F4DD5 /* CaptureViewController.swift in Sources */,
 				FBCFE1AA1FDB6787004F4DD5 /* ViewController.swift in Sources */,
 				FBCFE1DB1FDB8A9E004F4DD5 /* ProfileViewController.swift in Sources */,
 				FBCFE1A81FDB6787004F4DD5 /* AppDelegate.swift in Sources */,
+				FBCFE1DF1FDB99D0004F4DD5 /* Post.swift in Sources */,
 				FBCFE1D81FDB84B2004F4DD5 /* HomeFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

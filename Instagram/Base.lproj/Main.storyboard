@@ -91,7 +91,7 @@
                                                         <constraint firstAttribute="width" constant="290" id="o8L-5p-GIe"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Dope captions go here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbG-72-bFZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dope captions go here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbG-72-bFZ">
                                                     <rect key="frame" x="15" y="317" width="290" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -100,7 +100,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="MbG-72-bFZ" secondAttribute="bottom" constant="8" id="58h-oY-DcR"/>
+                                                <constraint firstItem="MbG-72-bFZ" firstAttribute="leading" secondItem="Mew-ch-NWc" secondAttribute="leading" id="6lq-hS-VPb"/>
                                                 <constraint firstItem="Mew-ch-NWc" firstAttribute="top" secondItem="R1M-5P-AhN" secondAttribute="topMargin" constant="8" id="BCM-v8-xUF"/>
+                                                <constraint firstItem="MbG-72-bFZ" firstAttribute="centerX" secondItem="R1M-5P-AhN" secondAttribute="centerX" id="GNk-q1-Hz3"/>
+                                                <constraint firstItem="MbG-72-bFZ" firstAttribute="trailing" secondItem="Mew-ch-NWc" secondAttribute="trailing" id="RGl-fR-beS"/>
                                                 <constraint firstItem="MbG-72-bFZ" firstAttribute="top" secondItem="Mew-ch-NWc" secondAttribute="bottom" constant="8" id="Xso-Mn-eHu"/>
                                                 <constraint firstItem="Mew-ch-NWc" firstAttribute="leading" secondItem="R1M-5P-AhN" secondAttribute="leadingMargin" id="f2x-l8-VJm"/>
                                                 <constraint firstItem="Mew-ch-NWc" firstAttribute="trailing" secondItem="R1M-5P-AhN" secondAttribute="trailingMargin" id="vc3-Oi-ex4"/>
@@ -135,14 +138,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9RL-ul-rEi">
-                                <rect key="frame" x="16" y="404" width="288" height="30"/>
+                                <rect key="frame" x="16" y="435" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZh-x9-30d">
-                                <rect key="frame" x="254" y="452" width="50" height="30"/>
+                                <rect key="frame" x="254" y="473" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Post"/>
                                 <connections>
@@ -152,12 +155,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="krF-th-Ipe">
                                 <rect key="frame" x="0.0" y="64" width="320" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.472422090630647" green="0.038725068825292142" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1Fd-BL-j9f" appends="YES" id="3O7-up-DdI"/>
-                                </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIx-1M-guj">
+                                <rect key="frame" x="16" y="397" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tap to choose a photo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddPhoto:" destination="asx-ve-HfI" eventType="touchUpInside" id="pIS-sJ-AMt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Nx9-1A-dcF"/>
@@ -169,11 +178,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdx-my-yPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="1Fd-BL-j9f">
-                    <connections>
-                        <action selector="onAddPhoto:" destination="asx-ve-HfI" id="4CC-7d-5OF"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2235" y="913.73239436619724"/>
         </scene>
@@ -220,6 +224,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WJS-t6-rBm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gec-r9-TDu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
