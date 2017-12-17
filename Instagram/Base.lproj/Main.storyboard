@@ -77,11 +77,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="386" id="vpg-ye-3p5" customClass="FeedTableViewCell" customModule="Instagram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="386"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="416" id="vpg-ye-3p5" customClass="FeedTableViewCell" customModule="Instagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="416"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vpg-ye-3p5" id="R1M-5P-AhN">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="385.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="415.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mew-ch-NWc">
@@ -91,27 +91,39 @@
                                                         <constraint firstAttribute="width" constant="290" id="o8L-5p-GIe"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dope captions go here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbG-72-bFZ">
-                                                    <rect key="frame" x="15" y="317" width="290" height="50"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Dope captions go here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbG-72-bFZ">
+                                                    <rect key="frame" x="15" y="317" width="290" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10 min ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us1-tf-Vjw">
+                                                    <rect key="frame" x="15" y="342" width="290" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="MbG-72-bFZ" secondAttribute="bottom" constant="8" id="58h-oY-DcR"/>
                                                 <constraint firstItem="MbG-72-bFZ" firstAttribute="leading" secondItem="Mew-ch-NWc" secondAttribute="leading" id="6lq-hS-VPb"/>
                                                 <constraint firstItem="Mew-ch-NWc" firstAttribute="top" secondItem="R1M-5P-AhN" secondAttribute="topMargin" constant="8" id="BCM-v8-xUF"/>
                                                 <constraint firstItem="MbG-72-bFZ" firstAttribute="centerX" secondItem="R1M-5P-AhN" secondAttribute="centerX" id="GNk-q1-Hz3"/>
+                                                <constraint firstItem="MbG-72-bFZ" firstAttribute="leading" secondItem="Mew-ch-NWc" secondAttribute="leading" id="NIg-9z-xgb"/>
                                                 <constraint firstItem="MbG-72-bFZ" firstAttribute="trailing" secondItem="Mew-ch-NWc" secondAttribute="trailing" id="RGl-fR-beS"/>
+                                                <constraint firstItem="Us1-tf-Vjw" firstAttribute="top" secondItem="MbG-72-bFZ" secondAttribute="bottom" constant="4" id="S0M-Go-i3H"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Us1-tf-Vjw" secondAttribute="bottom" constant="8" id="TF4-ia-P4r"/>
                                                 <constraint firstItem="MbG-72-bFZ" firstAttribute="top" secondItem="Mew-ch-NWc" secondAttribute="bottom" constant="8" id="Xso-Mn-eHu"/>
+                                                <constraint firstItem="Us1-tf-Vjw" firstAttribute="trailing" secondItem="Mew-ch-NWc" secondAttribute="trailing" id="bAB-g2-IYR"/>
                                                 <constraint firstItem="Mew-ch-NWc" firstAttribute="leading" secondItem="R1M-5P-AhN" secondAttribute="leadingMargin" id="f2x-l8-VJm"/>
+                                                <constraint firstItem="MbG-72-bFZ" firstAttribute="trailing" secondItem="Mew-ch-NWc" secondAttribute="trailing" id="hEa-QP-W45"/>
+                                                <constraint firstItem="Us1-tf-Vjw" firstAttribute="leading" secondItem="Mew-ch-NWc" secondAttribute="leading" id="lpV-oI-9K9"/>
                                                 <constraint firstItem="Mew-ch-NWc" firstAttribute="trailing" secondItem="R1M-5P-AhN" secondAttribute="trailingMargin" id="vc3-Oi-ex4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="captionLabel" destination="MbG-72-bFZ" id="kLs-3g-J9G"/>
                                             <outlet property="photoImageView" destination="Mew-ch-NWc" id="IGg-zp-FS7"/>
+                                            <outlet property="timeLabel" destination="Us1-tf-Vjw" id="Vsz-yj-A4f"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -260,7 +272,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Profile" id="XO6-S4-js6"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="P8D-I4-ity"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" id="KKi-ga-rU7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0a-LK-Xsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -312,6 +324,6 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P8D-I4-ity"/>
+        <segue reference="KKi-ga-rU7"/>
     </inferredMetricsTieBreakers>
 </document>

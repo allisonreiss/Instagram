@@ -65,7 +65,6 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as! FeedTableViewCell
-        
         let post = feed[indexPath.row]
         cell.captionLabel.text = post["caption"] as! String?
         
@@ -78,6 +77,28 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
                 print(error?.localizedDescription ?? "")
             }
         }
+        
+        var date: String = ""
+        let secondsBetween = Int(Date().timeIntervalSince(post.createdAt!))
+        if secondsBetween < 60 {
+            date = "\(secondsBetween) SECONDS AGO"
+        }
+        if secondsBetween < 120 {
+            date = "1 MINUTE AGO"
+        }
+        else if secondsBetween < 3600 {
+            date = "\(secondsBetween / 60) MINUTES AGO"
+        } else if secondsBetween < 7201 {
+            date = "1 HOUR AGO"
+        } else if secondsBetween < 86400 {
+            date = "\(secondsBetween / 3600) HOURS AGO"
+        } else if secondsBetween < 86401 {
+            date = "1 DAY AGO"
+        } else {
+            date = "\(secondsBetween / 86400) DAYS AGO"
+        }
+        
+        cell.timeLabel.text = date
         
         return cell
     }

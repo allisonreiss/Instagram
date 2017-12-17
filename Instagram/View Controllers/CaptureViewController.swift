@@ -62,7 +62,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
             if success {
                 print("Yayyyy photo posted!")
                 self.captionTextField.text = ""
-                self.photoImageView.image = nil
+                //self.photoImageView.image = nil
                 // go back to Home Feed
                 self.tabBarController?.selectedIndex = 0
             } else {
